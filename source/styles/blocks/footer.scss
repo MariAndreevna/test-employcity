@@ -42,6 +42,7 @@
 			position: relative;
 			padding-bottom: 20px;
 			margin-bottom: 20px;
+			padding-left: 0;
 
 			&::after {
 				content: "";
@@ -161,6 +162,7 @@
   @media (max-width: $tablet-width) {
     order: 3;
     gap: 20px;
+		padding: 0;
   }
 }
 
@@ -187,6 +189,10 @@
     width: 15px;
     height: 12px;
 		left: -21px;
+
+		@media (max-width: $desktop-width) {
+			left: -2px;
+		}
   }
 
   &--vk::before {
@@ -194,6 +200,10 @@
     width: 11px;
     height: 13px;
 		left: -19px;
+
+		@media (max-width: $desktop-width) {
+			left: 2px;
+		}
   }
 
   @media (max-width: $tablet-width) {
