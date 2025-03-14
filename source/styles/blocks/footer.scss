@@ -189,25 +189,21 @@
     width: 15px;
     height: 12px;
 		left: -21px;
-  }
 
-	@media (max-width: $desktop-width) {
-		&--mail::before {
+		@media (max-width: $desktop-width) {
 			left: -2px;
 		}
-	}
+  }
 
   &--vk::before {
     background-image: url("../../icons/vkontakte.svg");
     width: 11px;
     height: 13px;
 		left: -19px;
-  }
 
-	@media (max-width: $desktop-width) {
-		&--vk::before {
-		left: 2px;
-		}
+		@media (max-width: $desktop-width) {
+			left: 2px;
+  	}
 	}
 
   @media (max-width: $tablet-width) {
