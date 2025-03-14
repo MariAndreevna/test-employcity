@@ -4,28 +4,45 @@ on:
   push:
     branches:
       - main  # или ваша основная ветка
+  pull_request_target:
+    branches:
+      - '*'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Шаг: Checkout кода
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Шаг: Настройка Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
+      # 3. Шаг: Восстановление кеша NPM
+      - name: Restore npm cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: npm-
+
+      # 4. Шаг: Установка зависимостей
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
+      # 5. Шаг: Сборка проекта
       - name: Build project
-        run: npm run build  # Запускаем ваш скрипт сборки
+        run: npm run build
 
+      # 6. Шаг: Деплой на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./build  # Указываем, что деплоить из папки build
-          branch: gh-pages  # Деплоим на ветку gh-pages
+          folder: ./build  # Папка, в которой лежат собранные файлы
+          branch: gh-pages  # Ветка, куда будем деплоить
+
