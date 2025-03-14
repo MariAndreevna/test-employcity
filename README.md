@@ -31,7 +31,7 @@
 
 
 ## Установка проекта
-1. Убедитесь, что у вас установлены [Node.js](https://nodejs.org/) и [npm](https://www.npmjs.com/).
+1. Установите [Node.js](https://nodejs.org/) и [npm](https://www.npmjs.com/).
 2. Клонируйте репозиторий:
   ```bash
 	git clone https://github.com/ваш-username/ваш-репозиторий.git
