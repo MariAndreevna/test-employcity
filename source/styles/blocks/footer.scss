@@ -1,0 +1,212 @@
+.footer {
+  background-color: #3D4050;
+}
+
+.footer__conteiner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+
+	& > *:not(:last-child) {
+		position: relative;
+	}
+
+	& > *:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -28px;
+		width: 1px;
+		height: 18px;
+		background-color: #C3C3C3;
+	}
+
+  @media (max-width: $desktop-width) {
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+		& > *:not(:last-child)::after {
+			content: none;
+  	}
+	}
+
+	@media (max-width: $tablet-width) {
+		flex-direction: column;
+		gap: 20px;
+		text-align: center;
+
+		& > *:not(:last-child) {
+			position: relative;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100vw;
+				height: 1px;
+				background-color: rgba(255, 255, 255, 0.3);
+				top: 112%;
+			}
+		}
+	}
+}
+
+.footer__text {
+  font-size: 13px;
+	margin: 0px 6px 0px 3px;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  @media (max-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.footer__payment {
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px 35px;
+	flex-wrap: wrap;
+
+  @media (max-width: $desktop-width) {
+    gap: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    order: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+		flex-direction: column;
+  }
+}
+
+.footer__button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: #C3C3C3;
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -13;
+    top: 41%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--qiwi::before {
+    background-image: url("../../icons/qiwi.svg");
+    width: 20px;
+    height: 20px;
+  }
+
+  &--yandex::before {
+    background-image: url("../../icons/yandex_money.svg");
+    width: 14px;
+    height: 18px;
+		left: -6px;
+  }
+
+  &--money::before {
+    background-image: url("../../icons/web_money.svg");
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+		padding-left: 24px;
+  }
+
+	&:hover {
+    color: #43ABF0;
+  }
+
+  &:active {
+		color: #43ABF0;
+    opacity: 0.6;
+  }
+}
+
+.footer__contacts {
+  list-style: none;
+  display: flex;
+  gap: 20px 67px;
+  margin: 0;
+  padding: 0 0 0 20px;
+	flex-wrap: wrap;
+
+  @media (max-width: $desktop-width) {
+    gap: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    order: 3;
+    gap: 20px;
+  }
+}
+
+.footer__contact-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+  display: inline-block;
+  position: relative;
+  padding-left: 8px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--mail::before {
+    mask-image: url("../../icons/mail.svg");
+    background-color: #3E9CDC;
+    width: 15px;
+    height: 12px;
+		left: -21px;
+  }
+
+  &--vk::before {
+    background-image: url("../../icons/vkontakte.svg");
+    width: 11px;
+    height: 13px;
+		left: -19px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    padding-left: 21px;
+  }
+
+	&:hover {
+    color: #43ABF0;
+  }
+
+  &:active {
+		color: #43ABF0;
+    opacity: 0.6;
+  }
+}

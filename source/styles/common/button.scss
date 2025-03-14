@@ -1,0 +1,32 @@
+.button {
+  font-family: inherit;
+  font-size: 13px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+	border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+
+	&--order {
+		background-color: #3E9CDC;
+		border: 1px solid #FFFFFF;
+		padding: 12px;
+		min-width: 183px;
+	}
+
+	&:not(:disabled):hover {
+    opacity: 0.6;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: #CBC9D7;
+		cursor: not-allowed;
+  }
+}

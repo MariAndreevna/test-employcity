@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+	<link rel="preload" href="fonts/raleway/Raleway-ExtraBold.woff2" as="font" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/styles.css">
+	<title>LoremIpsum</title>
+</head>
+
+<body class="page__body">
+	<header class="header">
+		<div class="header__container container">
+			<h1 class="header__title">
+				<a class="header__logo" href="index.html" aria-current="page">
+					<span class="header__logo-text header__logo-text--white">LoremIpsum.</span><span class="header__logo-text header__logo-text--blue">Net</span>
+				</a>
+			</h1>
+
+			<nav class="header__nav nav">
+				<button class="nav__burger" aria-label="Открыть меню">
+					<span class="nav__burger-line"></span>
+					<span class="nav__burger-line"></span>
+					<span class="nav__burger-line"></span>
+				</button>
+				<ul class="nav__list nav__list--no-js">
+					<li class="nav__item">
+						<a class="nav__link" href="#" lang="ru">Бизнес</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#" lang="ru">О нас</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#" lang="ru">Цены</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#" lang="ru">Оформить заказ</a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="intro">
+			<div class="intro__container container">
+				<h2 class="intro__title"><span class="intro__title intro__title--blue">Lorem ipsum</span> dolor sit <span class="span-wrap">amet consectetur <span class="intro__title intro__title--blue">adipiscing</span></span></h2>
+				<p class="intro__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+				<ul class="intro__list">
+					<li class="intro__item">Totam rem aperiam eaque ipsa</li>
+					<li class="intro__item">Sit voluptatem accusantium doloremque laudantium</li>
+					<li class="intro__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+				</ul>
+				<div class="intro__button-container">
+					<a class="intro__button-link intro__button-link--order" href="#order" lang="ru">заказать</a>
+					<a class="intro__button-link intro__button-link--more" href="#" lang="ru">подробнее</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="order" id="order">
+			<div class="order__container container">
+				<h2 class="order__title" lang="ru">Оформление <span class="order__title order__title--blue"> Заказа</span></h2>
+				<p class="order__text" lang="ru">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+				<div class="order__info">
+					<ul class="order__list">
+						<li class="order__item order__item--search">Lorem ipsum dolor sit amet</li>
+						<li class="order__item order__item--percent">Сonsecteturadipiscing elit</li>
+						<li class="order__item order__item--documents">Sed do eiusmod tempor</li>
+						<li class="order__item order__item--mail">Esse cillum dolore eu fugiat</li>
+						<li class="order__item order__item--money">Excepteur sint occaecat cupidatat non proident</li>
+					</ul>
+				</div>
+
+				<form class="order__form" action="#" method="post" enctype="multipart/form-data">
+					<fieldset class="order__fieldset">
+						<legend class="visually-hidden" lang="ru">Форма запроса</legend>
+
+						<div class="order__select-custom">
+							<div class="order__select-selected">Выберите тип системы</div>
+							<ul class="order__select-options">
+								<li data-value="sed">Sed ut perspiciatis</li>
+								<li data-value="nemo">Nemo enim ipsam</li>
+								<li data-value="et">Et harum quidem</li>
+								<li data-value="temporibus">Temporibus autem</li>
+								<li data-value="itaque">Itaque earum rerum</li>
+							</ul>
+							<input type="hidden" name="type" id="system_type">
+						</div>
+
+						<div class="order__input-wrapper">
+							<label class="visually-hidden" for="email" lang="ru">Email</label>
+							<input class="order__input" type="email" id="email" name="email" placeholder="Ваш email" required>
+						</div>
+
+						<div class="order__input-wrapper">
+							<label class="visually-hidden" for="name" lang="ru">Имя</label>
+							<input class="order__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+						</div>
+
+						<div class="order__range-wrapper">
+							<label class="order__label" for="progress">Sed ut perspiciatis, unde omnis iste natus</label>
+							<div class="order__range-container">
+								<input class="order__range" type="range" id="progress" name="progress" min="0" max="100" value="75">
+								<span class="order__progress">75%</span>
+							</div>
+						</div>
+
+						<div class="order__file-wrapper">
+							<input class="order__file" type="file" id="file-upload" name="file">
+							<label class="order__file-label" for="file-upload" lang="ru">Прикрепить файл</label>
+						</div>
+
+						<button class="order__button button button--order" type="submit" lang="ru">Отправить</button>
+
+					</fieldset>
+				</form>
+
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__conteiner container">
+			<p class="footer__text"><span class="footer__text footer__text--uppercase">© 2018 «LoremIpsum.net»</span> Все права защищены.</p>
+
+			<ul class="footer__payment">
+				<li class="footer__payment-item">
+					<button class="footer__button footer__button--qiwi">Qiwi wallet</button>
+				</li>
+				<li class="footer__payment-item">
+					<button class="footer__button footer__button--yandex">Yandex Money</button>
+				</li>
+				<li class="footer__payment-item">
+					<button class="footer__button footer__button--money">Web Money</button>
+				</li>
+			</ul>
+
+			<ul class="footer__contacts">
+				<li class="footer__contact-item">
+					<a class="footer__contact-link footer__contact-link--mail" href="mailto:info@ipsum228.com" title="Написать нам на почту">info@ipsum228.com</a>
+				</li>
+				<li class="footer__contact-item">
+					<a class="footer__contact-link footer__contact-link--vk" href="#" lang="ru">Мы вконтакте</a>
+				</li>
+			</ul>
+
+		</div>
+	</footer>
+
+	<script src="scripts/index.js" defer></script>
+</body>
+
+</html>
