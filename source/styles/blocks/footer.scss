@@ -207,13 +207,12 @@
 	@media (max-width: $desktop-width) {
 		&--vk::before {
 		left: 2px;
+		}
 	}
-}
 
   @media (max-width: $tablet-width) {
     font-size: 12px;
     padding-left: 21px;
-
   }
 
 	&:hover {
