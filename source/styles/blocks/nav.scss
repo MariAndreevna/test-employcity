@@ -1,0 +1,142 @@
+.nav {
+  margin-left: auto;
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px 38px;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 58px;
+    right: -100%;
+    width: 100%;
+    background-color: rgba(16, 16, 29, 0.9);
+    transition: top 0.3s ease;
+    z-index: 5;
+    padding-top: 80px;
+  }
+
+	@media (min-width: $desktop-width) {
+		gap: 10px 60px;
+	}
+
+	&--active {
+		right: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	&--no-js {
+		@media (max-width: $tablet-width) {
+			position: fixed;
+			right: 0;
+			background-color: #272733;
+			padding-top: 0;
+			padding-bottom: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+}
+
+.nav__item {
+	@media (min-width: $tablet-width) {
+		margin-top: 4px;
+	}
+}
+
+.nav__link {
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: #43ABF0;
+  }
+
+  &:active {
+		color: #43ABF0;
+    opacity: 0.6;
+  }
+}
+
+.nav__burger {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+	&:not(.nav__burger--active):hover {
+    .nav__burger-line {
+      background-color: #43ABF0;
+    }
+  }
+
+  &:not(.nav__burger--active):active {
+    .nav__burger-line {
+      opacity: 0.6;
+    }
+  }
+
+  &--active {
+    .nav__burger-line:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .nav__burger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav__burger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+	}
+
+	&:hover {
+		.nav__burger-line {
+			background-color: #43ABF0;
+		}
+	}
+
+	&:active {
+		.nav__burger-line {
+			opacity: 0.6;
+		}
+	}
+}
+
+.nav__burger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition: all 0.4s ease;
+}
